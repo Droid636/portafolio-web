@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar Responsive</title>
+    <title>Navbar con Scroll Suave</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="/css//nav.css">
+   
 </head>
 <body>
 
@@ -15,12 +16,12 @@
             <a href="#">Mi Portafolio</a>
         </div>
         <nav class="links">
-            <a href="#">Inicio</a>
-            <a href="#">Proyectos</a>
-            <a href="#">Tecnologías</a>
-            <a href="#">Estudios</a>
-            <a href="#">Experiencia</a>
-            <a href="#">Contacto</a>
+            <a href="#inicio">Inicio</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#tecnologias">Tecnologías</a>
+            <a href="#estudios">Estudios</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#contacto">Contacto</a>
         </nav>
         <div class="menu-activador">
             <i class="fa-solid fa-bars"></i>
@@ -29,22 +30,46 @@
 
     <!-- Menú lateral para móviles -->
     <nav class="menu-lateral">
-        <a href="#">Inicio</a>
-        <a href="#">Proyectos</a>
-        <a href="#">Tecnologías</a>
-        <a href="#">Estudios</a>
-        <a href="#">Experiencia</a>
-        <a href="#">Contacto</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#tecnologias">Tecnologías</a>
+        <a href="#estudios">Estudios</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#contacto">Contacto</a>
     </nav>
 
-    <!-- Script para el menú lateral -->
+    <!-- Secciones -->
+    <section id="inicio">Inicio</section>
+    <section id="proyectos">Proyectos</section>
+    <section id="tecnologias">Tecnologías</section>
+    <section id="estudios">Estudios</section>
+    <section id="experiencia">Experiencia</section>
+    <section id="contacto">Contacto</section>
+
+    <!-- Script para el menú lateral y resaltar el enlace activo -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const menuActivador = document.querySelector(".menu-activador");
             const menuLateral = document.querySelector(".menu-lateral");
+            const links = document.querySelectorAll(".navbar .links a, .menu-lateral a");
 
+            // Activar y desactivar menú lateral en móviles
             menuActivador.addEventListener("click", function () {
                 menuLateral.classList.toggle("activo");
+            });
+
+            // Resaltar el enlace activo en el navbar
+            window.addEventListener("scroll", function () {
+                let scrollPos = window.scrollY;
+
+                links.forEach(link => {
+                    let section = document.querySelector(link.getAttribute("href"));
+
+                    if (section.offsetTop <= scrollPos && section.offsetTop + section.offsetHeight > scrollPos) {
+                        links.forEach(l => l.classList.remove("activo"));
+                        link.classList.add("activo");
+                    }
+                });
             });
         });
     </script>
