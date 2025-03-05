@@ -3,14 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Navbar Responsive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/css//nav.css">
 </head>
 <body>
-    <header>HOLA</header>
-    <section id="sobre-mi"></section>
-    <section id="proyectos"></section>
-    <section id="contacto"></section>
-    <footer></footer>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="#">Mi Portafolio</a>
+        </div>
+        <nav class="links">
+            <a href="#">Inicio</a>
+            <a href="#">Proyectos</a>
+            <a href="#">Tecnologías</a>
+            <a href="#">Estudios</a>
+            <a href="#">Experiencia</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <div class="menu-activador">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Menú lateral para móviles -->
+    <nav class="menu-lateral">
+        <a href="#">Inicio</a>
+        <a href="#">Proyectos</a>
+        <a href="#">Tecnologías</a>
+        <a href="#">Estudios</a>
+        <a href="#">Experiencia</a>
+        <a href="#">Contacto</a>
+    </nav>
+
+    <!-- Script para el menú lateral -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuActivador = document.querySelector(".menu-activador");
+            const menuLateral = document.querySelector(".menu-lateral");
+
+            menuActivador.addEventListener("click", function () {
+                menuLateral.classList.toggle("activo");
+            });
+        });
+    </script>
+
 </body>
 </html>

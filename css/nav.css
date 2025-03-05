@@ -1,0 +1,108 @@
+
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* --- Estilos generales --- */
+body {
+    height: 100vh;
+    background-color: black;
+    background-image: url("https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1517&q=80");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+        /* Navbar */
+        .navbar {
+            width: 100%;
+            height: 60px;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo a {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .navbar .links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .navbar .links a:hover {
+            color: orange;
+        }
+
+        /* Icono del menú hamburguesa */
+        .menu-activador {
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+            display: none;
+        }
+
+        /* Menú lateral */
+        .menu-lateral {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100vh;
+            background: rgba(36, 35, 35, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            transition: right 0.4s ease;
+        }
+
+        .menu-lateral a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        .menu-lateral a:hover {
+            color: orange;
+        }
+
+        .menu-lateral.activo {
+            right: 0;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .navbar .links {
+                display: none;
+            }
+
+            .menu-activador {
+                display: block;
+            }
+        }
+    
