@@ -165,3 +165,86 @@ body {
             font-size: 2rem;
             border-bottom: 1px solid #444;
         }
+
+
+        #inicio {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            padding: 50px;
+            background-color: #222;
+            opacity: 0;  /* Oculta la sección al inicio */
+            transform: translateY(30px); /* La baja un poco */
+            animation: aparecer 1s ease-out forwards; /* Aparece suavemente */
+        }
+
+        .contenido {
+            flex: 1;
+            max-width: 50%;
+            opacity: 0;
+            animation: deslizarTexto 1s ease-out forwards 0.5s; /* Retraso en animación */
+        }
+
+        .contenido h1 {
+            font-size: 3rem;
+            color: orange;
+        }
+
+        .contenido p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        .imagen {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            opacity: 0;
+            animation: deslizarImagen 1s ease-out forwards 0.8s; /* Retraso en animación */
+        }
+
+        .imagen img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            
+        }
+        .biografia{
+            color: white;
+        }
+
+        /* ANIMACIONES */
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes deslizarTexto {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes deslizarImagen {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* RESPONSIVIDAD */
+        @media (max-width: 768px) {
+            #inicio {
+                flex-direction: column;
+                text-align: justify;
+            }
+
+            .contenido, .imagen {
+                max-width: 90%;
+            }
+
+            .imagen img {
+                width: 50%;
+                max-width: 350px;
+            }
+            
+        }
