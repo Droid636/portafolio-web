@@ -116,8 +116,8 @@ body {
          }
         #proyectos { 
             height: 100vh;
-    background-color: black;
-    background-image: url("https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1517&q=80");
+    background-color: #323946;
+
     background-size: cover;
     background-position: center;
     margin: 0;
@@ -271,4 +271,119 @@ body {
 
 .redes-sociales a:hover {
     color: #0077cc;
+}
+/* estilo de segunda seccion*/
+/* Sección de proyectos */
+#proyectos {
+    background-color: #1e2530;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Título de la sección */
+#proyectos h2 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+#proyectos h2 span {
+    color: #00d9ff; /* Azul resaltado */
+}
+
+/* Contenedor de los proyectos en fila */
+.contenedor-proyectos {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tarjeta de cada proyecto */
+.proyecto {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    width: 250px;  /* Reducción del tamaño */
+    min-height: 280px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Imagen del proyecto */
+.proyecto img {
+    width: 220px; /* Aumentamos el tamaño */
+    height: auto;
+    margin-bottom: 12px;
+    display: block;
+}
+/* Título del proyecto */
+.proyecto h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Descripción y características */
+.proyecto p {
+    font-size: 12px;
+    color: #555;
+}
+
+.proyecto ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 8px;
+}
+
+.proyecto ul li {
+    font-size: 12px;
+    color: #333;
+    margin-top: 4px;
+}
+
+/* RESPONSIVE */
+
+/* Para tablets y móviles, mantener los cards en horizontal pero más pequeños */
+@media (max-width: 1024px) {
+    .contenedor-proyectos {
+        flex-wrap: nowrap;  /* Mantiene la fila */
+        overflow-x: auto;   /* Agrega scroll horizontal si es necesario */
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    .proyecto {
+        width: 220px;  /* Más pequeño en tablets */
+        min-height: 250px;
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles) */
+@media (max-width: 768px) {
+    .contenedor-proyectos {
+        flex-wrap: nowrap;
+        overflow-x: auto; /* Scroll horizontal si es necesario */
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    .proyecto {
+        width: 180px;  /* Más compacto en móviles */
+        min-height: 220px;
+        padding: 10px;
+    }
+
+    .proyecto img{
+        width: 150px; /* Aumentamos el tamaño */
+    height: auto;
+    margin-bottom: 12px;
+    display: block;
+    }
 }
