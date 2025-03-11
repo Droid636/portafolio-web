@@ -125,8 +125,8 @@ body {
          }
         #tecnologias { 
             height: 100vh;
-    background-color: black;
-    background-image: url("https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1517&q=80");
+    background-color: #323946;
+
     background-size: cover;
     background-position: center;
     margin: 0;
@@ -385,5 +385,158 @@ body {
     height: auto;
     margin-bottom: 12px;
     display: block;
+    }
+}
+
+
+
+/* Estilos generales */
+#tecnologias {
+    background-color: #1e2530;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#tecnologias h2 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+#tecnologias h2 span {
+    color: #00d9ff; /* Color resaltado */
+}
+
+/* Contenedor de las tecnologías */
+.contenedor-tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Tarjeta de tecnología */
+.tecnologia {
+    display: flex;
+    align-items: center;
+    width: 45%;
+    margin: 15px 0;
+}
+
+/* Iconos de las tecnologías */
+.tecnologia img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Nombre de la tecnología */
+.tecnologia span {
+    font-size: 16px;
+    color: white;
+    flex: 1;
+}
+
+/* Barra de progreso */
+.barra {
+    width: 50%;
+    height: 10px;
+    background: #2c3646;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progreso {
+    height: 100%;
+    width: 0;
+    background: #00d9ff;
+    transition: width 2s ease-in-out;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .tecnologia {
+        width: 100%;
+    }
+    .barra {
+        width: 60%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilos generales */
+#estudios {
+    background-color: #1e2530;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#estudios h2 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* Contenedor de estudios */
+.contenedor-estudios {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Tarjetas de estudios */
+.estudio {
+    background-color: #2c3646;
+    border: 2px solid transparent;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.estudio:hover {
+    border-color: #00d9ff;
+    transform: translateY(-5px);
+}
+
+/* Imágenes */
+.estudio img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Título */
+.estudio h3 {
+    color: #00d9ff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Descripción */
+.estudio p {
+    color: white;
+    font-size: 14px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contenedor-estudios {
+        flex-direction: column;
+        align-items: center;
     }
 }

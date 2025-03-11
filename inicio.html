@@ -97,8 +97,70 @@
         </div>
     </section>
     
-    <section id="tecnologias">Tecnologías</section>
-    <section id="estudios">Estudios</section>
+    <section id="tecnologias">
+        <h2>Mis <span>Tecnologías</span></h2>
+        <div class="contenedor-tecnologias">
+            <div class="tecnologia">
+                <img src="html-icon.png" alt="HTML">
+                <span>HTML - 5</span>
+                <div class="barra">
+                    <div class="progreso" data-valor="90"></div>
+                </div>
+            </div>
+            <div class="tecnologia">
+                <img src="css-icon.png" alt="CSS">
+                <span>CSS - 3</span>
+                <div class="barra">
+                    <div class="progreso" data-valor="80"></div>
+                </div>
+            </div>
+            <div class="tecnologia">
+                <img src="react-icon.png" alt="React">
+                <span>React</span>
+                <div class="barra">
+                    <div class="progreso" data-valor="70"></div>
+                </div>
+            </div>
+            <div class="tecnologia">
+                <img src="js-icon.png" alt="JavaScript">
+                <span>JavaScript</span>
+                <div class="barra">
+                    <div class="progreso" data-valor="75"></div>
+                </div>
+            </div>
+            <div class="tecnologia">
+                <img src="photoshop-icon.png" alt="Adobe Photoshop">
+                <span>Adobe Photoshop</span>
+                <div class="barra">
+                    <div class="progreso" data-valor="60"></div>
+                </div>
+            </div>
+            <div class="tecnologia">
+                <img src="figma-icon.png" alt="Figma">
+                <span>Figma</span>
+                <div class="barra">
+                    <div class="progreso" data-valor="85"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="estudios">
+        <h2>Estudios</h2>
+        <div class="contenedor-estudios">
+            <div class="estudio">
+                <img src="enabe-logo.png" alt="ENABE">
+                <h3>Centro de Capacitación para el Estudio y Trabajo ENABE</h3>
+                <p>ENABE ofrece servicios de formación en Microsoft y Diseño Gráfico, brindando formación práctica y certificada en diversas áreas.</p>
+            </div>
+            <div class="estudio">
+                <img src="utsh-logo.png" alt="UTSH">
+                <h3>Universidad Tecnológica de la Sierra Hidalguense (UTSH)</h3>
+                <p>La UTSH es una institución que forma profesionales con conocimientos en diversas tecnologías, fomentando el desarrollo de habilidades clave para el mercado laboral.</p>
+            </div>
+        </div>
+    </section>
+    
     <section id="experiencia">Experiencia</section>
     <section id="contacto">Contacto</section>
 
@@ -128,6 +190,16 @@
                 });
             });
         });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const barras = document.querySelectorAll(".progreso");
+        
+            barras.forEach(barra => {
+                const valor = barra.getAttribute("data-valor");
+                barra.style.width = valor + "%";
+            });
+        });
+        
     </script>
 
 </body>
