@@ -232,19 +232,43 @@ body {
         }
 
         /* RESPONSIVIDAD */
-        @media (max-width: 768px) {
-            #inicio {
-                flex-direction: column;
-                text-align: justify;
-            }
+       /* Responsividad */
+@media (max-width: 768px) {
+    .navbar .links {
+        display: none;
+    }
 
-            .contenido, .imagen {
-                max-width: 90%;
-            }
+    .menu-activador {
+        display: block;
+    }
 
-            .imagen img {
-                width: 50%;
-                max-width: 350px;
-            }
-            
-        }
+    #inicio {
+        flex-direction: column;
+        text-align: justify;
+    }
+
+    #inicio .contenido {
+        max-width: 100%;
+    }
+
+    .redes-sociales {
+        justify-content: center;
+    }
+}
+
+/* Iconos de redes sociales */
+.redes-sociales {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.redes-sociales a {
+    font-size: 24px;
+    color: wheat;
+    text-decoration: none;
+}
+
+.redes-sociales a:hover {
+    color: #0077cc;
+}
